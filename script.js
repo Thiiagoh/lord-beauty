@@ -10,16 +10,9 @@
   };
   const validUrl = (url) => { try { return ['https:', 'http:'].includes(new URL(url).protocol); } catch { return false; } };
   document.querySelectorAll('[data-destination]').forEach((anchor) => {
-    const destination = anchor.dataset.destination;
-    const url = cfg[destination];
+    const url = cfg[anchor.dataset.destination];
     if (validUrl(url)) anchor.href = url;
     else anchor.addEventListener('click', (event) => { event.preventDefault(); showToast('Este link ainda não foi configurado. Edite o arquivo config.js.'); });
-    anchor.addEventListener('click', () => {
-      if (!validUrl(url)) return;
-      if (typeof window.fbq === 'function') {
-        window.fbq('track', 'Lead', { content_name: `Lord Beauty - ${destination}` });
-      }
-    });
   });
   if (validUrl(cfg.instagram)) {
     document.getElementById('instagram-link').href = cfg.instagram;
