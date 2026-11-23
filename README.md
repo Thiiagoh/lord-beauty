@@ -5,7 +5,7 @@ Landing page estática responsiva para GitHub Pages.
 ## Antes de publicar
 
 Abra `config.js` e cole o convite real do grupo WhatsApp no campo `whatsapp`.
-O campo `telegram` veio preenchido com o canal geral `https://t.me/LordOfertasVip`, conforme informado anteriormente. Troque-o caso seja outro canal.
+O campo `telegram` veio preenchido com o canal geral `https://t.me/OfertasLord`, conforme informado anteriormente. Troque-o caso seja outro canal.
 Você pode deixar `instagram` vazio.
 
 **IMPORTANTE:** Sem o link de WhatsApp configurado, o botão principal exibe um aviso e NÃO abre um grupo.
